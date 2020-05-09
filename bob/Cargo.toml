@@ -1,0 +1,7 @@
+[dependencies]
+regex = "1"
+
+[package]
+edition = "2018"
+name = "bob"
+version = "1.6.0"

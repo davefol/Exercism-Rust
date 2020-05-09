@@ -1,0 +1,22 @@
+pub fn nth(n: u32) -> u32 {
+    // brute force
+    let _n:usize = n as usize;
+    
+    let mut primes = vec![2];
+    let mut test_number:u32 = 3;
+
+    while primes.len() < _n {
+        let is_composite = false;
+        for i in (2..test_number-1).rev() {
+            if test_number % i == 0 {
+                is_composite = true;
+                break
+            }
+        }
+        if is_composite == false {
+            primes.push(test_number);
+            if primes.len() == _n { return test_number; }
+        }   
+        test_number++;
+    }
+}
